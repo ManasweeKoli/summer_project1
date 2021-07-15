@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<style>
+	.f{
+		font-family: 'Merriweather', serif;
+		color: #4B0082;
+		font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+	}
+
+body{
+	  font-family: 'Zilla Slab', serif;
+	  font-size: 20px;
+    color: dark;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+     background-image: url('/static/images/bg13.jpg');
+      background-repeat: no-repeat; 
+      background-attachment: fixed;
+      background-size: cover;
+}
+
+.button {
+  background-color:#DDA0DD; /* Green */
+  border:none;
+  border-radius: 8px;
+  font-family: 'Zilla Slab', serif;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  width:345px;
+}
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.m{
+	font-family: 'Zilla Slab', serif;
+    font-size: 25px;
+    color:white;
+ }
+
+a {
+  outline: none;
+}
+
+.navbar-container {
+  text-align: center;
+  background-color: #C0C0C0;
+  box-shadow: 0px -20px 5px 20px #333333;
+  padding: 10px;
+  font-size: 16px;
+  height: 70px;
+}
+
+.navbar-container ul {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  display: inline-block;
+  
+}
+
+.navbar-container ul li {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.navbar-container ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;  
+  padding: 10px;
+  transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+  height: 3px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.2s, background-color 0.5s;
+  margin: 0 auto;
+}
+
+.navbar-container ul li.active-link .underline {
+  width: 100%;
+  background-color: #98777b;
+}
+
+.navbar-container ul li:hover .underline {
+  background-color: #98777b;
+  width: 100%;
+}
+
+.navbar-container ul li:hover a {
+}
+
+.navbar-container ul li:active a {
+  transition: none;
+  color: rgba(255,255,255,0.76);
+}
+
+.navbar-container ul li:active .underline {
+  transition: none;
+  background-color: rgba(255,255,255,0.76);
+} 
+
+.container{
+  margin-left:35%;
+  margin-top:50px;
+}
+
+
+
+.l{
+   margin-left:130px;
+}
+
+</style>	
+
+<body>
+  <div class="navbar-container">
+  <ul>
+    <li class="nav-link">
+      <a href="/">Home</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link active-link">
+      <a href="#">Activity</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="/testimonials">Testimonials</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="/feedback">Feedback</a>
+      <div class="underline"></div>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+<button id="ida1" class="button button1">Exercise</button><br><br>
+    <script type="text/javascript">
+        document.getElementById("ida1").onclick = function () {
+        location.href = "/ex_kids";
+      };
+    </script>
+<div class="l"><button id="ida2" class="button button1">E-Books</button></div><br>
+    <script type="text/javascript">
+        document.getElementById("ida2").onclick = function () {
+        location.href = "/books";
+      };
+    </script>
+<button id="ida3" class="button button1">Games</button><br><br>
+    <script type="text/javascript">
+        document.getElementById("ida3").onclick = function () {
+        location.href = "/games";
+      };
+    </script>
+<div class="l"><button id="ida4" class="button button1">Music</button></div><br>
+    <script type="text/javascript">
+        document.getElementById("ida4").onclick = function () {
+        location.href = "/music";
+      };
+    </script>
+<button id="ida5" class="button button1">Adventour</button><br><br>
+    <script type="text/javascript">
+        document.getElementById("ida5").onclick = function () {
+        location.href = "/ent";
+      };
+    </script>
+<div class="l"><button id="ida6" class="button button1">My Diary</button></div><br>
+    <script type="text/javascript">
+        document.getElementById("ida6").onclick = function () {
+        location.href = "/diary";
+      };
+    </script>
+<button id="ida7" class="button button1">Doodle Art</button><br><br>
+    <script type="text/javascript">
+        document.getElementById("ida7").onclick = function () {
+        location.href = "/doodle_art";
+      };
+    </script>
+<div class="l"><button id="ida8" class="button button1">News</button></div><br>
+    <script type="text/javascript">
+        document.getElementById("ida8").onclick = function () {
+        location.href = "/news";
+      };
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+
+  <script>
+    window.onload = function(){
+    document.getElementById("diary")
+    .addEventListener("click",()=>{
+       const invoice = this.document.getElementById("invoice");
+       console.log(invoice);
+       console.log(window);
+       var opt = {
+           margin:       1,
+           filename:     'myfile.pdf',
+           image:        { type: 'jpeg', quality: 0.98 },
+           html2canvas:  { scale: 2 },
+           jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                 };
+       html2pdf().from(invoice).set(opt).save();
+
+                                 })
+                           }
+  </script>  
+ 
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js></script>
+
+
+<style type="text/css">
+	body {
+  font-family: 'Zilla Slab', serif;
+  font-size: 30px;
+  background: #E6E6FA;
+  color: lightcoral;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+  .f{
+    font-family: 'Suez One', serif;
+    color: #4B0082;
+    font-size: 70px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+input[type=text]{
+  width: 100%; 
+  display: inline-block;
+  border: none;
+  padding: 5px;
+  background: #D8BFD8;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px; 
+}
+
+input[type=date]{
+  width: 50%; 
+  display: inline-block;
+  border: none;
+  padding: 5px;
+  background: #D8BFD8;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px; 
+}
+
+textarea{
+  width: 100%;
+  height: 250px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: #D8BFD8;
+  resize: none;
+}
+
+
+
+.lr{
+  margin-left: 10px;
+}
+
+.btn {
+  background-color:#4B0082; /* Green */
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  width: 150px;
+  margin-left: 40%;
+  cursor: pointer;
+}
+
+.b{
+	font-family: 'Zilla Slab', serif;
+    color: #4B0082;
+    font-size: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-left: 20%;
+}
+
+</style>  
+
+</head>
+
+<body>
+
+ <div id="invoice">
+ <header><div class="f">My Diary</div> </header>
+
+
+  <form class="form" method="post" action="/add_user">
+
+     <label class="b"><b>Date</b></label><br>
+     <input id="txtdate" placeholder="Pick a Date" type="date" name="date"><br><br>
+
+     <label class="b"><b>Title</b></label><br>
+     <input type="text" name="title" id="title" class="entry-text-title" placeholder="Name of entry ✏️"/><br><br>
+
+     <label class="b"><b>Today's Entry</b></label>
+    <textarea placeholder="What's on your mind today? 💭" name="entry"></textarea><br>
+  
+  </form> 
+  </div>
+  <br>
+  <div class="grid">
+  <button type="button" class="btn" id="diary">Save</button>  
+  <button type="button" class="btn" id="back">Back</button>
+  </div>
+  <br><br>
+	
+
+      <script type="text/javascript">
+        document.getElementById("back").onclick = function () {
+        location.href = "/activity";
+      };
+     </script>
+
+</body>
+</html>

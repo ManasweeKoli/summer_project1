@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<style>
+	.f{
+		font-family: 'Merriweather', serif;
+		color: #4B0082;
+		font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+	}
+
+body{
+	  font-family: 'Zilla Slab', serif;
+	  font-size: 20px;
+      color: dark;
+     
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 30px;
+}
+.card{
+  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid: dark;
+  padding: 2px;
+  width: 300px;
+  height: 400px;
+}
+
+
+.card:hover{
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.container{
+  margin-left: 50px;
+}
+
+.f1{
+    font-family: 'Zilla Slab', serif;
+    color: dark;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.btn {
+  background-color: #90EE90; /* Green */
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button {
+  background-color:#DDA0DD; /* Green */
+  border:none;
+  border-radius: 8px;
+  font-family: 'Zilla Slab', serif;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 20px;
+  margin-left: 140px; 
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 20px;
+  margin-left: 220px; 
+}
+
+</style>
+
+<body>
+ 
+<section class="my-5">
+
+<div class="grid1">
+<button class="button button1"><a href="#action">Adventure</a></button>
+<button class="button button1"><a href="#child">Children</a></button>
+<button class="button button1"><a href="#bio">Biography</a></button>
+<button class="button button1"><a href="#fantasy">Fantasy</a></button>
+<button class="button button1"><a href="#classic">Classic</a></button>
+<button class="button button1"><a href="#scifi">Sci-Fi</a></button>
+</div><br>
+<div class="grid2">
+<button class="button button1"><a href="#fiction">Fiction</a></button>
+<button class="button button1"><a href="#horror">Horror</a></button>
+<button class="button button1"><a href="#mystery">Mystery</a></button>
+<button class="button button1"><a href="#self">Self Help</a></button>
+<button class="button button1"><a href="#short">Tales</a></button>
+</div>
+
+
+
+<div id="action">
+<u style="color: #800080;"><p class="f1"><b>Action and Adventure</b></p></u>
+<div class="grid">
+
+      <div class="card">
+       <img src="/static/images/stardust.jpg" height="400" width="300">        
+      </div>      
+      <div class="card">
+       <img src="/static/images/black tulip.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/shadow.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/journey to the centre.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/around the world in 80 days.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/harry.jpg" height="400" width="300">
+      </div>
+</div>
+</div>
+<br>
+
+<div id="child">
+  <u style="color: #800080;"><p class="f1"><b>Children and Teen</b></p></u>
+  <div class="grid">
+      <div class="card">
+       <img src="/static/images/alice in wonderland.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/heidi.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/pied piper.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/hamlet.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/peterpan.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/princess nobody.jpg" height="400" width="300">
+      </div>
+  </div>    
+</div>
+<br>
+
+
+<div id="bio">
+<u style="color: #800080;"><p class="f1"><b>Biography</b></p></u>
+<div class="grid">      
+      <div class="card">
+       <img src="/static/images/priyanka chopra.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/diary of young girl.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/michelle obama.jpg" height="400" width="300">
+      </div>
+       <div class="card">
+       <img src="/static/images/american pioneer.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/wings of fire.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/gandhi.jpg" height="400" width="300">
+      </div>
+</div>
+</div>      
+<br>
+
+
+<div id="fantasy">
+<u style="color: #800080;"><p class="f1"><b>Fantasy</b></p></u>
+<div class="grid">        
+      <div class="card">
+       <img src="/static/images/nightland.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/wizard of oz.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/king in yellow.jpg" height="400" width="300">
+      </div>
+</div>
+</div>
+<br>
+
+
+<div id="classic">
+<u style="color: #800080;"><p class="f1"><b>Classic</b></p></u>
+<div class="grid">        
+      <div class="card">
+       <img src="/static/images/oedipus.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/merchant of venice.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/sonnets.jpg" height="400" width="300">
+      </div>
+</div>
+</div>
+<br>
+
+
+<div id="scifi">
+<u style="color: #800080;"><p class="f1"><b>Science Fiction</b></p></u>
+<div class="grid"> 
+      <div class="card">
+       <img src="/static/images/Princess_of_Mars_.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/time machine.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/war of worlds.jpg" height="400" width="300">
+      </div>
+</div>
+</div>
+<br>
+
+<div id="fiction">
+<u style="color: #800080;"><p class="f1"><b>Young Adult Fiction</b></p></u>
+<div class="grid">       
+      <div class="card">
+       <img src="/static/images/fault in our stars.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/breaking point.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/red queen.jpg" height="400" width="300">
+      </div>
+</div> 
+</div>
+<br>  
+
+<div id= "horror">
+<u style="color: #800080;"><p class="f1"><b>Horror</b></p></u>
+<div class="grid">       
+      <div class="card">
+       <img src="/static/images/birdbox.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/vampyre.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/mexican gothic.jpg" height="400" width="300">
+      </div>
+</div> 
+</div>
+
+<br>
+
+<div id="mystery">
+<u style="color: #800080;"><p class="f1"><b>Mystery and Thriller</b></p></u>
+<div class="grid">       
+      <div class="card">
+       <img src="/static/images/whiteroom.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/black water tales.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/death.jpg" height="400" width="300">
+      </div>
+</div> 
+</div>
+<br>
+
+<div id ="self">
+<u style="color: #800080;"><p class="f1"><b>Self Help</b></p></u>
+<div class="grid">       
+      <div class="card">
+       <img src="/static/images/one skill.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/think like monk.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/big magic.jpg" height="400" width="300">
+      </div>
+</div> 
+</div>
+<br>
+
+<div id="short">
+<u style="color: #800080;"><p class="f1"><b>Short Stories</b></p></u>
+<div class="grid">       
+      <div class="card">
+       <img src="/static/images/last leaf1.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/christmas.jpg" height="400" width="300">
+      </div>
+      <div class="card">
+       <img src="/static/images/gift of magic.jpg" height="400" width="300">
+      </div>
+</div> 
+</div>
+<br>
+
+</div>
+
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+<style type="text/css">
+a {
+  outline: none;
+}
+
+.navbar-container {
+  text-align: center;
+  background-color: #C0C0C0;
+  box-shadow: 0px -20px 5px 20px #333333;
+  padding: 10px;
+  font-size: 16px;
+  height: 70px;
+}
+
+.navbar-container ul {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  display: inline-block;
+  
+}
+
+.navbar-container ul li {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.navbar-container ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;  
+  padding: 10px;
+  transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+  height: 3px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.2s, background-color 0.5s;
+  margin: 0 auto;
+}
+
+.navbar-container ul li.active-link .underline {
+  width: 100%;
+  background-color: #98777b;
+}
+
+.navbar-container ul li:hover .underline {
+  background-color: #98777b;
+  width: 100%;
+}
+
+.navbar-container ul li:hover a {
+}
+
+.navbar-container ul li:active a {
+  transition: none;
+  color: rgba(255,255,255,0.76);
+}
+
+.navbar-container ul li:active .underline {
+  transition: none;
+  background-color: rgba(255,255,255,0.76);
+} 
+
+ *, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+ 
+ html body {
+
+   color: #202046;
+   font-size: 32px;
+   font-family: 'Inter', sans-serif;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+ html body main {
+   width: 100%;
+   max-width: 1440px;
+   padding: 16px;
+}
+ html body main .slider .buttons {
+   z-index: 1;
+   left: 50%;
+   top: 261px;
+   width: 80px;
+   height: 40px;
+   position: absolute;
+   border-radius: 50px;
+   transform: translateX(50%);
+   background-color: #fff;
+}
+ html body main .slider .buttons .previous, html body main .slider .buttons .next {
+   width: 50%;
+   height: 100%;
+   position: absolute;
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+}
+ html body main .slider .buttons .previous {
+   left: 0;
+   background-image: url('https://alcs-slider.netlify.app/images/icon-prev.svg');
+}
+ html body main .slider .buttons .previous:hover {
+   transform: scale(1.25);
+}
+ html body main .slider .buttons .next {
+   right: 0;
+   background-image: url('https://alcs-slider.netlify.app/images/icon-next.svg');
+}
+ html body main .slider .buttons .next:hover {
+   transform: scale(1.25);
+}
+ html body main .slider .slide {
+   display: flex;
+   margin: 0 auto;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column-reverse;
+}
+ html body main .slider .slide .testimonial {
+   padding: 32px 51px;
+   background-size: 60px;
+   background-position: top;
+   background-repeat: no-repeat;
+   background-image: url(https://alcs-slider.netlify.app/images/pattern-quotes.svg);
+}
+ html body main .slider .slide .testimonial blockquote {
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 24px;
+   margin-bottom: 36px;
+}
+ html body main .slider .slide .testimonial .author {
+   font-size: 15px;
+   font-weight: 700;
+}
+ html body main .slider .slide .testimonial .author span {
+   display: block;
+   color: #babacf;
+   font-weight: 500;
+}
+ html body main .slider .slide .slider-img {
+   width: 100%;
+   padding: 30px;
+   display: flex;
+   margin-bottom: 40px;
+   align-items: center;
+   justify-content: center;
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-image: url(https://alcs-slider.netlify.app/images/pattern-bg.svg);
+}
+ html body main .slider .slide .slider-img img {
+   width: 240px;
+   display: block;
+   border-radius: 10px;
+   box-shadow: 0px 16px 40px 0px rgba(135, 105, 210, 0.4);
+}
+ html body main .slider .slide .active {
+   opacity: 1;
+   transform: translateX(0) scale(1);
+   transition-delay: 0.4s;
+}
+ html body footer {
+   font-size: 11px;
+   text-align: center;
+}
+ html body footer a {
+   color: #3e52a3;
+}
+ html body .hide {
+   display: none;
+}
+ @media screen and (min-width: 600px) {
+   html body main {
+     max-width: 800px;
+  }
+   html body main .slider .buttons {
+     top: 280px;
+  }
+}
+ @media screen and (min-width: 900px) {
+   html body main {
+     width: 100%;
+     max-width: 1054px;
+     padding: 64px 64px 64px 0;
+  }
+   html body main .slider .buttons {
+     right: 43%;
+     top: 500px;
+  }
+   html body main .slider .slide {
+     position: relative;
+     text-align: left;
+     display: flex;
+     flex-direction: row;
+  }
+   html body main .slider .slide .testimonial {
+     padding: 32px 0 0 0;
+     background-size: 80px;
+     background-position: 19% -7%;
+     transform: translateX(100px);
+  }
+   html body main .slider .slide .testimonial blockquote {
+     font-size: 24px;
+     line-height: 30px;
+  }
+   html body main .slider .slide .testimonial .author span {
+     display: contents;
+  }
+   html body main .slider .slide .slider-img {
+     padding: 55px;
+  }
+   html body main .slider .slide .slider-img img {
+     width: 400px;
+  }
+} 
+</style>
+</head>
+<div class="navbar-container">
+  <ul>
+    <li class="nav-link">
+      <a href="/">Home</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="/activity">Activity</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link active-link">
+      <a href="#">Testimonials</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="/feedback">Feedback</a>
+      <div class="underline"></div>
+    </li>
+  </ul>
+</div>
+	
+ <body>
+
+
+ <main>
+  <div class="slider">
+
+    <div class="buttons">
+      <div class="previous"></div>
+      <div class="next"></div>
+    </div>
+
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote>“ This is such a wonderful idea for staying entertained inspite of being stuck at home.
+          I couldn’t recommend this course enough.”</blockquote>
+        <p class="author">Tanya Sinclair
+          
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="/static/images/testimonials/t7.jpg" alt="Author Image">
+      </div>
+
+    </div>
+
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote>“ Love this website. ”</blockquote>
+        <p class="author">John Tarkpor
+         
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="/static/images/testimonials/t44.jpg" alt="Author Image">
+      </div>
+
+    </div>
+
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote>“ This page has an amazing collection of books”</blockquote>
+        <p class="author">Kaci Brookz
+         
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="/static/images/testimonials/t11.jpg" alt="Author Image">
+      </div>
+
+    </div>
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote>“ The contents really helped brighten my day”</blockquote>
+        <p class="author">Tyler Lewis
+          
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="/static/images/testimonials/t22.jpg" alt="Author Image">
+      </div>
+
+    </div>
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote>“ Would definitely recommend this to others.”</blockquote>
+        <p class="author">Adam Harrison
+         
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="/static/images/testimonials/t55.jpg" alt="Author Image">
+      </div>
+
+    </div>
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote>“Exploring this website was definitely a positive experience.”</blockquote>
+        <p class="author">
+         
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="/static/images/testimonials/t16.jpg" alt="Author Image">
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+
+</body>
+
+<script type="text/javascript">
+  const next = document.querySelector(".next");
+const prev = document.querySelector(".previous");
+const slides = document.querySelectorAll(".slide");
+
+let index = 0;
+display(index);
+
+function display(index) {
+  slides.forEach((slide) => {
+    slide.style.display = "none";
+  });
+  slides[index].style.display = "flex";
+}
+
+function nextSlide() {
+  index++;
+  if (index > slides.length - 1) {
+    index = 0;
+  }
+  display(index);
+}
+
+function prevSlide() {
+  index--;
+  if (index < 0) {
+    index = slides.length - 1;
+  }
+  display(index);
+}
+
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
+
+</script>
+</html>
